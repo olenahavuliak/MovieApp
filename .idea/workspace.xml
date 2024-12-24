@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c1f4fbb5-214f-401e-834b-d376a7db562a" name="Changes" comment="feat: &#10;&#10;Initial commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2TcwxypudTsi1iyQcpeO6GySQmt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/NerdySoft/Pet-project/MovieApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "3850e9282206b064faa2e66189dd8259",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.movieapp.annotations" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\NerdySoft\Pet-project\MovieApp\target" />
+      <recent name="C:\Nerdy Soft\Pet-project\MovieApp\src\main\java\com\example\movieapp\keyclock" />
+      <recent name="C:\Nerdy Soft\Pet-project\MovieApp\src\main\java\com\example\movieapp" />
+      <recent name="C:\Nerdy Soft\Pet-project\MovieApp\src\main\resources\changelog" />
+      <recent name="C:\Nerdy Soft\Pet-project\MovieApp\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.movieapp.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.identity-service: Compose Deployment">
+    <configuration name="MovieAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MovieApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.movieapp.MovieAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.identity-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="identity-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="keycloak" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo-database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo-database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo-express: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo-express" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.pgadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="pgadmin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.identity-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongo-express: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongo-database: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.pgadmin: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Olena\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1f4fbb5-214f-401e-834b-d376a7db562a" name="Changes" comment="" />
+      <created>1691355930444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691355930444</updated>
+      <workItem from="1691355931559" duration="5880000" />
+      <workItem from="1691429530143" duration="1347000" />
+      <workItem from="1691482564963" duration="16000" />
+      <workItem from="1691570124645" duration="1173000" />
+      <workItem from="1691919462807" duration="11894000" />
+      <workItem from="1692513776997" duration="602000" />
+      <workItem from="1692601783231" duration="113000" />
+      <workItem from="1692618107042" duration="416000" />
+      <workItem from="1692787323751" duration="10000" />
+      <workItem from="1692788159833" duration="62000" />
+      <workItem from="1693853659745" duration="1104000" />
+      <workItem from="1694360220513" duration="13182000" />
+      <workItem from="1694421172653" duration="20000" />
+      <workItem from="1694682585046" duration="180000" />
+      <workItem from="1694699793585" duration="7631000" />
+      <workItem from="1694714053986" duration="51000" />
+      <workItem from="1694714151454" duration="311000" />
+      <workItem from="1694714492203" duration="703000" />
+      <workItem from="1694769476528" duration="14022000" />
+      <workItem from="1695023673026" duration="763000" />
+      <workItem from="1695116948382" duration="655000" />
+      <workItem from="1695137587918" duration="1224000" />
+      <workItem from="1695154172250" duration="681000" />
+      <workItem from="1695650806781" duration="50000" />
+      <workItem from="1697098217337" duration="9693000" />
+      <workItem from="1697137906254" duration="2140000" />
+      <workItem from="1697183311799" duration="970000" />
+      <workItem from="1697194805592" duration="2937000" />
+      <workItem from="1697444648901" duration="636000" />
+      <workItem from="1698612843338" duration="185000" />
+      <workItem from="1698613083999" duration="80000" />
+      <workItem from="1698614648909" duration="977000" />
+      <workItem from="1698615833568" duration="503000" />
+      <workItem from="1705436678500" duration="643000" />
+      <workItem from="1705482555847" duration="598000" />
+      <workItem from="1706183762387" duration="2795000" />
+      <workItem from="1706192353811" duration="750000" />
+      <workItem from="1707992982625" duration="58000" />
+      <workItem from="1708365287439" duration="1409000" />
+      <workItem from="1709911637788" duration="2161000" />
+      <workItem from="1710147363809" duration="548000" />
+      <workItem from="1710416335782" duration="583000" />
+      <workItem from="1710939994892" duration="845000" />
+      <workItem from="1710951495315" duration="593000" />
+      <workItem from="1714730833596" duration="94000" />
+      <workItem from="1715014266603" duration="177000" />
+      <workItem from="1715330317301" duration="2546000" />
+      <workItem from="1716807682855" duration="1166000" />
+      <workItem from="1716821739882" duration="7067000" />
+      <workItem from="1717509247765" duration="714000" />
+      <workItem from="1717923085085" duration="1942000" />
+      <workItem from="1717930121522" duration="344000" />
+      <workItem from="1717930775572" duration="65000" />
+      <workItem from="1717931937915" duration="12000" />
+      <workItem from="1735038485942" duration="170000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat(base): added base entities, their repositories, dto, mappers, services and controllers, postgres and liquibase properties">
+      <option name="closed" value="true" />
+      <created>1694711427169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694711427169</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: &#10;&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1698615982306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698615982306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="feat(base): added base entities, their repositories, dto, mappers, services and controllers, postgres and liquibase properties" />
+    <MESSAGE value="feat: &#10;&#10;Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: &#10;&#10;Initial commit" />
+  </component>
+</project>

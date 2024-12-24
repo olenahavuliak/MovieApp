@@ -1,0 +1,14 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "classpath:changelog/20230910-create-director-table.json"
+      }
+    },
+    {
+      "include": {
+        "file": "classpath:changelog/20230910-create-movie-table.json"
+      }
+    }
+  ]
+}

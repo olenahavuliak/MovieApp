@@ -1,0 +1,160 @@
+version: '3.9'
+name: "afriland-bank"
+services:
+  opensearch:
+    build: .
+    container_name: opensearch-server
+    hostname: opensearch
+    ports:
+      - 9200:9200
+      - 9600:9600
+    environment:
+      - discovery.type=single-node
+      - "DISABLE_SECURITY_PLUGIN=true"
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:2.11.0
+    container_name: opensearch-dashboards
+    ports:
+      - 5601:5601
+    environment:
+      OPENSEARCH_HOSTS: '["http://opensearch:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: "true"
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - pg-network
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: keycloak
+    command: start-dev
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=root
+      - DB_VENDOR=POSTGRES
+      - DB_ADDR=postgres
+      - DB_DATABASE=postgres
+      - DB_SCHEMA=public
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+  axon_server:
+    image: 'axoniq/axonserver'
+    container_name: axonserver
+    ports:
+      - '8024:8024'
+      - '8124:8124'
+    hostname: localhost
+    volumes:
+      - /data/axon:/data
+      - /data/axon/eventdata:/data/eventdata
+    privileged: yes
+
+  rabbitmq:
+    image: rabbitmq:3.9.11-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - elastic
+
+  mongo:
+    image: mongo:latest
+    command: [ --replSet, my-replica-set, --bind_ip_all, --port, "27017" ]
+    container_name: mongo-replica
+    ports:
+      - "27023:27017"
+    environment:
+      MONGO_INITDB_DATABASE: customer-service-db
+    healthcheck:
+      test: test $$(mongosh --port 27017 --quiet --eval "try {rs.initiate({_id:'my-replica-set',members:[{_id:0,host:\"mongo:27017\"}]})} catch(e) {rs.status().ok}") -eq 1
+      interval: 10s
+      start_period: 30s
+
+  mongo-database:
+    image: mongo:latest
+    restart: always
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./workspace:/workspace
+      - type: volume
+        source: mongodb_data_volume
+        target: /data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - "28081:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo-db
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+      ME_CONFIG_MONGODB_URL: mongodb://mongo-db:27017/
+    depends_on:
+      - mongo-database
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    networks:
+      - pg-network
+    depends_on:
+      - postgres
+
+  identity-service:
+    image: amazoncorretto:17-alpine-jdk
+    container_name: identity-service
+    volumes:
+      - ./services/identity-service/target/identity-service-0.0.1-SNAPSHOT.jar
+      - ./config/application-global.properties:/application.properties
+    ports:
+      - "8081:8081"
+    environment:
+      DB_URL: "mongodb://mongo-db:27017/identity-service"
+
+    networks:
+      - app-network
+
+volumes:
+  elasticsearch-data-volume:
+    driver: local
+  mongodb_data_volume:
+  postgres:
+  pgadmin:
+networks:
+  elastic:
+  psql-graphql:
+  pg-network:
+  app-network:
+    driver: bridge
+
+

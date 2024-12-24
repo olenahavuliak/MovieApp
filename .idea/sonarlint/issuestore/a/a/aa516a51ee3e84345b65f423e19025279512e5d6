@@ -1,0 +1,19 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(şÁÁ
+q
+java:S1450	"VRemove the "message" field and declare it as a local variable in the relevant methods.(ù„è¿ûÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(ˆïÀâ
+a
+java:S6201"KReplace this instanceof check and cast with 'instanceof String stringValue'(Ğ»µÈ
+f
+java:S6201"KReplace this instanceof check and cast with 'instanceof Number numberValue'(¹Íõ†üÿÿÿÿ
+G
+java:S1172'",Remove this unused method parameter "value".(·™…‰ıÿÿÿÿ
+D
+java:S19055")Remove this unnecessary cast to "double".(ÏÜğşÿÿÿÿ
+D
+java:S19058")Remove this unnecessary cast to "double".(¦ÌÂÕúÿÿÿÿ
+F
+java:S1068	"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
